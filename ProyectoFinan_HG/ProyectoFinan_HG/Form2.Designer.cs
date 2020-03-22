@@ -30,34 +30,40 @@
         {
             this.tbcGestionDomiciliario = new System.Windows.Forms.TabControl();
             this.tbpRegistro = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlRegistro = new System.Windows.Forms.Panel();
-            this.lbMensaje = new System.Windows.Forms.Label();
-            this.lbId = new System.Windows.Forms.Label();
-            this.lbNombre = new System.Windows.Forms.Label();
-            this.lbApellido = new System.Windows.Forms.Label();
-            this.lbAnioexp = new System.Windows.Forms.Label();
-            this.lbEstado = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.cbxAnios = new System.Windows.Forms.ComboBox();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.cbxAnios = new System.Windows.Forms.ComboBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lbEstado = new System.Windows.Forms.Label();
+            this.lbAnioexp = new System.Windows.Forms.Label();
+            this.lbApellido = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
+            this.lbMensaje = new System.Windows.Forms.Label();
+            this.tbpConsulta = new System.Windows.Forms.TabPage();
+            this.pnlConsulta = new System.Windows.Forms.Panel();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnConsultarDomiciliarios = new System.Windows.Forms.Button();
             this.tbcGestionDomiciliario.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
+            this.tbpConsulta.SuspendLayout();
+            this.pnlConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcGestionDomiciliario
             // 
             this.tbcGestionDomiciliario.Controls.Add(this.tbpRegistro);
-            this.tbcGestionDomiciliario.Controls.Add(this.tabPage2);
+            this.tbcGestionDomiciliario.Controls.Add(this.tbpConsulta);
             this.tbcGestionDomiciliario.Location = new System.Drawing.Point(12, 24);
             this.tbcGestionDomiciliario.Name = "tbcGestionDomiciliario";
             this.tbcGestionDomiciliario.SelectedIndex = 0;
-            this.tbcGestionDomiciliario.Size = new System.Drawing.Size(598, 418);
+            this.tbcGestionDomiciliario.Size = new System.Drawing.Size(498, 386);
             this.tbcGestionDomiciliario.TabIndex = 0;
             // 
             // tbpRegistro
@@ -66,20 +72,10 @@
             this.tbpRegistro.Location = new System.Drawing.Point(4, 22);
             this.tbpRegistro.Name = "tbpRegistro";
             this.tbpRegistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpRegistro.Size = new System.Drawing.Size(590, 392);
+            this.tbpRegistro.Size = new System.Drawing.Size(490, 360);
             this.tbpRegistro.TabIndex = 0;
             this.tbpRegistro.Text = "Registrar Domiciliario";
             this.tbpRegistro.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pnlRegistro
             // 
@@ -96,85 +92,42 @@
             this.pnlRegistro.Controls.Add(this.lbNombre);
             this.pnlRegistro.Controls.Add(this.lbId);
             this.pnlRegistro.Controls.Add(this.lbMensaje);
-            this.pnlRegistro.Location = new System.Drawing.Point(34, 38);
+            this.pnlRegistro.Location = new System.Drawing.Point(15, 17);
             this.pnlRegistro.Name = "pnlRegistro";
-            this.pnlRegistro.Size = new System.Drawing.Size(520, 315);
+            this.pnlRegistro.Size = new System.Drawing.Size(458, 315);
             this.pnlRegistro.TabIndex = 0;
             // 
-            // lbMensaje
+            // btnGuardar
             // 
-            this.lbMensaje.AutoSize = true;
-            this.lbMensaje.Location = new System.Drawing.Point(77, 46);
-            this.lbMensaje.Name = "lbMensaje";
-            this.lbMensaje.Size = new System.Drawing.Size(158, 13);
-            this.lbMensaje.TabIndex = 0;
-            this.lbMensaje.Text = "Ingrese los datos del domiciliario";
+            this.btnGuardar.Location = new System.Drawing.Point(363, 272);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // lbId
+            // rbInactivo
             // 
-            this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(77, 104);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(79, 13);
-            this.lbId.TabIndex = 1;
-            this.lbId.Text = "Identificación : ";
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(259, 227);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(63, 17);
+            this.rbInactivo.TabIndex = 11;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
             // 
-            // lbNombre
+            // rbActivo
             // 
-            this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(77, 137);
-            this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(55, 13);
-            this.lbNombre.TabIndex = 2;
-            this.lbNombre.Text = "Nombres :";
-            // 
-            // lbApellido
-            // 
-            this.lbApellido.AutoSize = true;
-            this.lbApellido.Location = new System.Drawing.Point(77, 174);
-            this.lbApellido.Name = "lbApellido";
-            this.lbApellido.Size = new System.Drawing.Size(58, 13);
-            this.lbApellido.TabIndex = 3;
-            this.lbApellido.Text = "Apellidos : ";
-            // 
-            // lbAnioexp
-            // 
-            this.lbAnioexp.AutoSize = true;
-            this.lbAnioexp.Location = new System.Drawing.Point(77, 206);
-            this.lbAnioexp.Name = "lbAnioexp";
-            this.lbAnioexp.Size = new System.Drawing.Size(109, 13);
-            this.lbAnioexp.TabIndex = 4;
-            this.lbAnioexp.Text = "Años de experiencia :";
-            // 
-            // lbEstado
-            // 
-            this.lbEstado.AutoSize = true;
-            this.lbEstado.Location = new System.Drawing.Point(77, 241);
-            this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(46, 13);
-            this.lbEstado.TabIndex = 5;
-            this.lbEstado.Text = "Estado :";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(216, 97);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 6;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(216, 130);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 7;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(216, 167);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 8;
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(180, 227);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(55, 17);
+            this.rbActivo.TabIndex = 10;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
             // 
             // cbxAnios
             // 
@@ -184,47 +137,130 @@
             "entre 5 y 10",
             "entre 11 y 20",
             "más de 20"});
-            this.cbxAnios.Location = new System.Drawing.Point(216, 203);
+            this.cbxAnios.Location = new System.Drawing.Point(180, 187);
             this.cbxAnios.Name = "cbxAnios";
             this.cbxAnios.Size = new System.Drawing.Size(121, 21);
             this.cbxAnios.TabIndex = 9;
             // 
-            // rbActivo
+            // txtApellido
             // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(216, 241);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(55, 17);
-            this.rbActivo.TabIndex = 10;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = true;
+            this.txtApellido.Location = new System.Drawing.Point(180, 151);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 8;
             // 
-            // rbInactivo
+            // txtNombre
             // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(341, 241);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(63, 17);
-            this.rbInactivo.TabIndex = 11;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = true;
+            this.txtNombre.Location = new System.Drawing.Point(180, 109);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 7;
             // 
-            // btnGuardar
+            // txtId
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(416, 277);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.txtId.Location = new System.Drawing.Point(180, 73);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 6;
+            // 
+            // lbEstado
+            // 
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Location = new System.Drawing.Point(28, 231);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(46, 13);
+            this.lbEstado.TabIndex = 5;
+            this.lbEstado.Text = "Estado :";
+            // 
+            // lbAnioexp
+            // 
+            this.lbAnioexp.AutoSize = true;
+            this.lbAnioexp.Location = new System.Drawing.Point(28, 195);
+            this.lbAnioexp.Name = "lbAnioexp";
+            this.lbAnioexp.Size = new System.Drawing.Size(109, 13);
+            this.lbAnioexp.TabIndex = 4;
+            this.lbAnioexp.Text = "Años de experiencia :";
+            // 
+            // lbApellido
+            // 
+            this.lbApellido.AutoSize = true;
+            this.lbApellido.Location = new System.Drawing.Point(28, 158);
+            this.lbApellido.Name = "lbApellido";
+            this.lbApellido.Size = new System.Drawing.Size(58, 13);
+            this.lbApellido.TabIndex = 3;
+            this.lbApellido.Text = "Apellidos : ";
+            // 
+            // lbNombre
+            // 
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(28, 116);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(55, 13);
+            this.lbNombre.TabIndex = 2;
+            this.lbNombre.Text = "Nombres :";
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Location = new System.Drawing.Point(28, 80);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(79, 13);
+            this.lbId.TabIndex = 1;
+            this.lbId.Text = "Identificación : ";
+            // 
+            // lbMensaje
+            // 
+            this.lbMensaje.AutoSize = true;
+            this.lbMensaje.Location = new System.Drawing.Point(28, 22);
+            this.lbMensaje.Name = "lbMensaje";
+            this.lbMensaje.Size = new System.Drawing.Size(158, 13);
+            this.lbMensaje.TabIndex = 0;
+            this.lbMensaje.Text = "Ingrese los datos del domiciliario";
+            this.lbMensaje.Click += new System.EventHandler(this.lbMensaje_Click);
+            // 
+            // tbpConsulta
+            // 
+            this.tbpConsulta.Controls.Add(this.pnlConsulta);
+            this.tbpConsulta.Location = new System.Drawing.Point(4, 22);
+            this.tbpConsulta.Name = "tbpConsulta";
+            this.tbpConsulta.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpConsulta.Size = new System.Drawing.Size(490, 360);
+            this.tbpConsulta.TabIndex = 1;
+            this.tbpConsulta.Text = "Consultar Domiciliarios";
+            this.tbpConsulta.UseVisualStyleBackColor = true;
+            // 
+            // pnlConsulta
+            // 
+            this.pnlConsulta.Controls.Add(this.btnConsultarDomiciliarios);
+            this.pnlConsulta.Controls.Add(this.dgvDatos);
+            this.pnlConsulta.Location = new System.Drawing.Point(17, 22);
+            this.pnlConsulta.Name = "pnlConsulta";
+            this.pnlConsulta.Size = new System.Drawing.Size(453, 317);
+            this.pnlConsulta.TabIndex = 0;
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(19, 71);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(413, 209);
+            this.dgvDatos.TabIndex = 0;
+            // 
+            // btnConsultarDomiciliarios
+            // 
+            this.btnConsultarDomiciliarios.Location = new System.Drawing.Point(19, 34);
+            this.btnConsultarDomiciliarios.Name = "btnConsultarDomiciliarios";
+            this.btnConsultarDomiciliarios.Size = new System.Drawing.Size(148, 23);
+            this.btnConsultarDomiciliarios.TabIndex = 1;
+            this.btnConsultarDomiciliarios.Text = "Consultar Domiciliarios";
+            this.btnConsultarDomiciliarios.UseVisualStyleBackColor = true;
+            this.btnConsultarDomiciliarios.Click += new System.EventHandler(this.btnConsultarDomiciliarios_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 481);
+            this.ClientSize = new System.Drawing.Size(556, 442);
             this.Controls.Add(this.tbcGestionDomiciliario);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -232,6 +268,9 @@
             this.tbpRegistro.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
+            this.tbpConsulta.ResumeLayout(false);
+            this.pnlConsulta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,7 +279,7 @@
 
         private System.Windows.Forms.TabControl tbcGestionDomiciliario;
         private System.Windows.Forms.TabPage tbpRegistro;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbpConsulta;
         private System.Windows.Forms.Panel pnlRegistro;
         private System.Windows.Forms.RadioButton rbInactivo;
         private System.Windows.Forms.RadioButton rbActivo;
@@ -255,5 +294,8 @@
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.Label lbMensaje;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Panel pnlConsulta;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Button btnConsultarDomiciliarios;
     }
 }

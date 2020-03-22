@@ -32,19 +32,25 @@
             this.lbMensaje = new System.Windows.Forms.Label();
             this.tbcGestionEmpresa = new System.Windows.Forms.TabControl();
             this.tbpRegistro = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlRegistro = new System.Windows.Forms.Panel();
-            this.lbNit = new System.Windows.Forms.Label();
-            this.lbNombre = new System.Windows.Forms.Label();
-            this.lbFecha = new System.Windows.Forms.Label();
-            this.lbComnit = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtNitcamara = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lbComnit = new System.Windows.Forms.Label();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbNit = new System.Windows.Forms.Label();
+            this.tbpConsulta = new System.Windows.Forms.TabPage();
+            this.pnlConsulta = new System.Windows.Forms.Panel();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnConsultarEmpresas = new System.Windows.Forms.Button();
             this.tbcGestionEmpresa.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
+            this.tbpConsulta.SuspendLayout();
+            this.pnlConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNit
@@ -67,11 +73,11 @@
             // tbcGestionEmpresa
             // 
             this.tbcGestionEmpresa.Controls.Add(this.tbpRegistro);
-            this.tbcGestionEmpresa.Controls.Add(this.tabPage2);
-            this.tbcGestionEmpresa.Location = new System.Drawing.Point(47, 49);
+            this.tbcGestionEmpresa.Controls.Add(this.tbpConsulta);
+            this.tbcGestionEmpresa.Location = new System.Drawing.Point(12, 24);
             this.tbcGestionEmpresa.Name = "tbcGestionEmpresa";
             this.tbcGestionEmpresa.SelectedIndex = 0;
-            this.tbcGestionEmpresa.Size = new System.Drawing.Size(504, 361);
+            this.tbcGestionEmpresa.Size = new System.Drawing.Size(483, 361);
             this.tbcGestionEmpresa.TabIndex = 2;
             // 
             // tbpRegistro
@@ -84,16 +90,6 @@
             this.tbpRegistro.TabIndex = 0;
             this.tbpRegistro.Text = "Registra Empresa Domiciliaria";
             this.tbpRegistro.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pnlRegistro
             // 
@@ -112,41 +108,26 @@
             this.pnlRegistro.Size = new System.Drawing.Size(434, 283);
             this.pnlRegistro.TabIndex = 0;
             // 
-            // lbNit
+            // txtNitcamara
             // 
-            this.lbNit.AutoSize = true;
-            this.lbNit.Location = new System.Drawing.Point(25, 63);
-            this.lbNit.Name = "lbNit";
-            this.lbNit.Size = new System.Drawing.Size(26, 13);
-            this.lbNit.TabIndex = 2;
-            this.lbNit.Text = "Nit :";
+            this.txtNitcamara.Location = new System.Drawing.Point(210, 181);
+            this.txtNitcamara.Name = "txtNitcamara";
+            this.txtNitcamara.Size = new System.Drawing.Size(138, 20);
+            this.txtNitcamara.TabIndex = 9;
             // 
-            // lbNombre
+            // dtpFecha
             // 
-            this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(25, 102);
-            this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(50, 13);
-            this.lbNombre.TabIndex = 3;
-            this.lbNombre.Text = "Nombre :";
+            this.dtpFecha.Location = new System.Drawing.Point(210, 143);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 8;
             // 
-            // lbFecha
+            // txtNombre
             // 
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.Location = new System.Drawing.Point(25, 143);
-            this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(102, 13);
-            this.lbFecha.TabIndex = 4;
-            this.lbFecha.Text = "Fecha de operación";
-            // 
-            // lbComnit
-            // 
-            this.lbComnit.AutoSize = true;
-            this.lbComnit.Location = new System.Drawing.Point(25, 188);
-            this.lbComnit.Name = "lbComnit";
-            this.lbComnit.Size = new System.Drawing.Size(134, 13);
-            this.lbComnit.TabIndex = 5;
-            this.lbComnit.Text = "Nit de cámara de comercio";
+            this.txtNombre.Location = new System.Drawing.Point(210, 95);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(138, 20);
+            this.txtNombre.TabIndex = 7;
             // 
             // btnGuardar
             // 
@@ -158,32 +139,85 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtNombre
+            // lbComnit
             // 
-            this.txtNombre.Location = new System.Drawing.Point(210, 95);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(138, 20);
-            this.txtNombre.TabIndex = 7;
+            this.lbComnit.AutoSize = true;
+            this.lbComnit.Location = new System.Drawing.Point(25, 188);
+            this.lbComnit.Name = "lbComnit";
+            this.lbComnit.Size = new System.Drawing.Size(134, 13);
+            this.lbComnit.TabIndex = 5;
+            this.lbComnit.Text = "Nit de cámara de comercio";
             // 
-            // dtpFecha
+            // lbFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(210, 143);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
-            this.dtpFecha.TabIndex = 8;
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.Location = new System.Drawing.Point(25, 143);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(102, 13);
+            this.lbFecha.TabIndex = 4;
+            this.lbFecha.Text = "Fecha de operación";
             // 
-            // txtNitcamara
+            // lbNombre
             // 
-            this.txtNitcamara.Location = new System.Drawing.Point(210, 181);
-            this.txtNitcamara.Name = "txtNitcamara";
-            this.txtNitcamara.Size = new System.Drawing.Size(138, 20);
-            this.txtNitcamara.TabIndex = 9;
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(25, 102);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(50, 13);
+            this.lbNombre.TabIndex = 3;
+            this.lbNombre.Text = "Nombre :";
+            // 
+            // lbNit
+            // 
+            this.lbNit.AutoSize = true;
+            this.lbNit.Location = new System.Drawing.Point(25, 63);
+            this.lbNit.Name = "lbNit";
+            this.lbNit.Size = new System.Drawing.Size(26, 13);
+            this.lbNit.TabIndex = 2;
+            this.lbNit.Text = "Nit :";
+            // 
+            // tbpConsulta
+            // 
+            this.tbpConsulta.Controls.Add(this.pnlConsulta);
+            this.tbpConsulta.Location = new System.Drawing.Point(4, 22);
+            this.tbpConsulta.Name = "tbpConsulta";
+            this.tbpConsulta.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpConsulta.Size = new System.Drawing.Size(475, 335);
+            this.tbpConsulta.TabIndex = 1;
+            this.tbpConsulta.Text = "Consultar Empresas";
+            this.tbpConsulta.UseVisualStyleBackColor = true;
+            // 
+            // pnlConsulta
+            // 
+            this.pnlConsulta.Controls.Add(this.btnConsultarEmpresas);
+            this.pnlConsulta.Controls.Add(this.dgvDatos);
+            this.pnlConsulta.Location = new System.Drawing.Point(32, 27);
+            this.pnlConsulta.Name = "pnlConsulta";
+            this.pnlConsulta.Size = new System.Drawing.Size(415, 271);
+            this.pnlConsulta.TabIndex = 0;
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(17, 57);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(374, 185);
+            this.dgvDatos.TabIndex = 0;
+            // 
+            // btnConsultarEmpresas
+            // 
+            this.btnConsultarEmpresas.Location = new System.Drawing.Point(17, 20);
+            this.btnConsultarEmpresas.Name = "btnConsultarEmpresas";
+            this.btnConsultarEmpresas.Size = new System.Drawing.Size(136, 23);
+            this.btnConsultarEmpresas.TabIndex = 1;
+            this.btnConsultarEmpresas.Text = "Consultar Empresas";
+            this.btnConsultarEmpresas.UseVisualStyleBackColor = true;
+            this.btnConsultarEmpresas.Click += new System.EventHandler(this.btnConsultarEmpresas_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 443);
+            this.ClientSize = new System.Drawing.Size(527, 419);
             this.Controls.Add(this.tbcGestionEmpresa);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -191,6 +225,9 @@
             this.tbpRegistro.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
+            this.tbpConsulta.ResumeLayout(false);
+            this.pnlConsulta.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +239,7 @@
         private System.Windows.Forms.TabControl tbcGestionEmpresa;
         private System.Windows.Forms.TabPage tbpRegistro;
         private System.Windows.Forms.Panel pnlRegistro;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbpConsulta;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lbComnit;
         private System.Windows.Forms.Label lbFecha;
@@ -211,6 +248,9 @@
         private System.Windows.Forms.TextBox txtNitcamara;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Panel pnlConsulta;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Button btnConsultarEmpresas;
     }
 }
 

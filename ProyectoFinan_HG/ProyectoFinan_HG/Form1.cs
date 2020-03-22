@@ -48,5 +48,13 @@ namespace ProyectoFinan_HG
                 MessageBox.Show("Empresa Domiciliaria  no Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnConsultarEmpresas_Click(object sender, EventArgs e)
+        {
+            DataSet dsResultado = new DataSet();
+            dsResultado = empresa.consultarEmpresa();
+            dgvDatos.DataSource = dsResultado;
+            dgvDatos.DataMember = "ResultadoDatos";
+        }
     }
 }
