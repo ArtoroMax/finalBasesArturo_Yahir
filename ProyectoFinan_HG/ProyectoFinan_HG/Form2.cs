@@ -63,7 +63,7 @@ namespace ProyectoFinan_HG
             dsResultado = domi.consultarDomiciliario();
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
-            //g
+            //gh
         }
     }
 }
