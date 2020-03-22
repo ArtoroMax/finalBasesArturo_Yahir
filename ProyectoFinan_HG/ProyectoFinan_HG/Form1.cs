@@ -55,6 +55,7 @@ namespace ProyectoFinan_HG
             dsResultado = empresa.consultarEmpresa();
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
+            //u
         }
     }
 }
