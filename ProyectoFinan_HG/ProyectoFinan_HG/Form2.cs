@@ -61,5 +61,20 @@ namespace ProyectoFinan_HG
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string cod = txtIdEliminar.Text;
+            DataSet dsResultado = new DataSet();
+            dsResultado = domi.eliminarDomiciliario(cod);
+            if (dsResultado.Tables[0].Rows.Count > 0)
+            {
+                MessageBox.Show("Domiciliario eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Id no encontrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

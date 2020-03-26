@@ -54,5 +54,20 @@ namespace ProyectoFinan_HG
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string cod = txtEliminar.Text;
+            DataSet dsResultado = new DataSet();
+            dsResultado = empresa.eliminarEmpresa(cod);
+            if (dsResultado.Tables[0].Rows.Count > 0)
+            {
+                MessageBox.Show("Empresa eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Nit no encontrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

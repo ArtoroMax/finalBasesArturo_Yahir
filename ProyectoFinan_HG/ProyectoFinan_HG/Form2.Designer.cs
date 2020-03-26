@@ -46,20 +46,26 @@
             this.lbMensaje = new System.Windows.Forms.Label();
             this.tbpConsulta = new System.Windows.Forms.TabPage();
             this.pnlConsulta = new System.Windows.Forms.Panel();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnConsultarDomiciliarios = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.tbpEliminar = new System.Windows.Forms.TabPage();
+            this.lbEliminar = new System.Windows.Forms.Label();
+            this.txtIdEliminar = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.tbcGestionDomiciliario.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.tbpConsulta.SuspendLayout();
             this.pnlConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.tbpEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcGestionDomiciliario
             // 
             this.tbcGestionDomiciliario.Controls.Add(this.tbpRegistro);
             this.tbcGestionDomiciliario.Controls.Add(this.tbpConsulta);
+            this.tbcGestionDomiciliario.Controls.Add(this.tbpEliminar);
             this.tbcGestionDomiciliario.Location = new System.Drawing.Point(12, 24);
             this.tbcGestionDomiciliario.Name = "tbcGestionDomiciliario";
             this.tbcGestionDomiciliario.SelectedIndex = 0;
@@ -238,14 +244,6 @@
             this.pnlConsulta.Size = new System.Drawing.Size(453, 317);
             this.pnlConsulta.TabIndex = 0;
             // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(19, 71);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(413, 209);
-            this.dgvDatos.TabIndex = 0;
-            // 
             // btnConsultarDomiciliarios
             // 
             this.btnConsultarDomiciliarios.Location = new System.Drawing.Point(19, 34);
@@ -255,6 +253,53 @@
             this.btnConsultarDomiciliarios.Text = "Consultar Domiciliarios";
             this.btnConsultarDomiciliarios.UseVisualStyleBackColor = true;
             this.btnConsultarDomiciliarios.Click += new System.EventHandler(this.btnConsultarDomiciliarios_Click);
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(19, 71);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(413, 209);
+            this.dgvDatos.TabIndex = 0;
+            // 
+            // tbpEliminar
+            // 
+            this.tbpEliminar.Controls.Add(this.btnEliminar);
+            this.tbpEliminar.Controls.Add(this.txtIdEliminar);
+            this.tbpEliminar.Controls.Add(this.lbEliminar);
+            this.tbpEliminar.Location = new System.Drawing.Point(4, 22);
+            this.tbpEliminar.Name = "tbpEliminar";
+            this.tbpEliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpEliminar.Size = new System.Drawing.Size(490, 360);
+            this.tbpEliminar.TabIndex = 2;
+            this.tbpEliminar.Text = "Eliminar Domiciliario";
+            this.tbpEliminar.UseVisualStyleBackColor = true;
+            // 
+            // lbEliminar
+            // 
+            this.lbEliminar.AutoSize = true;
+            this.lbEliminar.Location = new System.Drawing.Point(28, 53);
+            this.lbEliminar.Name = "lbEliminar";
+            this.lbEliminar.Size = new System.Drawing.Size(177, 13);
+            this.lbEliminar.TabIndex = 0;
+            this.lbEliminar.Text = "Ingrese id del domiciliario a eliminar :";
+            // 
+            // txtIdEliminar
+            // 
+            this.txtIdEliminar.Location = new System.Drawing.Point(259, 46);
+            this.txtIdEliminar.Name = "txtIdEliminar";
+            this.txtIdEliminar.Size = new System.Drawing.Size(129, 20);
+            this.txtIdEliminar.TabIndex = 1;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(259, 110);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(119, 20);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // Form2
             // 
@@ -271,6 +316,8 @@
             this.tbpConsulta.ResumeLayout(false);
             this.pnlConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            this.tbpEliminar.ResumeLayout(false);
+            this.tbpEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +344,9 @@
         private System.Windows.Forms.Panel pnlConsulta;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btnConsultarDomiciliarios;
+        private System.Windows.Forms.TabPage tbpEliminar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TextBox txtIdEliminar;
+        private System.Windows.Forms.Label lbEliminar;
     }
 }

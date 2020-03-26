@@ -34,5 +34,14 @@ namespace ProyectoFinan_HG.logica
             miDS = dt.ejecutarSELECT(consulta);
             return miDS;
         }
+
+        public DataSet eliminarEmpresa(string nit)
+        {
+            string consulta;
+            DataSet miDS = new DataSet();
+            consulta = "delete from EmpresaDomiciliaria where empNit = " + nit;
+            miDS = dt.ejecutarSELECT(consulta);
+            return miDS;
+        }
     }
 }

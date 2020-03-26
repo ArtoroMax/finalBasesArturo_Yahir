@@ -43,14 +43,19 @@
             this.lbNit = new System.Windows.Forms.Label();
             this.tbpConsulta = new System.Windows.Forms.TabPage();
             this.pnlConsulta = new System.Windows.Forms.Panel();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnConsultarEmpresas = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.tbpEliminar = new System.Windows.Forms.TabPage();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lbEliminar = new System.Windows.Forms.Label();
+            this.txtEliminar = new System.Windows.Forms.TextBox();
             this.tbcGestionEmpresa.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.tbpConsulta.SuspendLayout();
             this.pnlConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.tbpEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNit
@@ -74,6 +79,7 @@
             // 
             this.tbcGestionEmpresa.Controls.Add(this.tbpRegistro);
             this.tbcGestionEmpresa.Controls.Add(this.tbpConsulta);
+            this.tbcGestionEmpresa.Controls.Add(this.tbpEliminar);
             this.tbcGestionEmpresa.Location = new System.Drawing.Point(12, 24);
             this.tbcGestionEmpresa.Name = "tbcGestionEmpresa";
             this.tbcGestionEmpresa.SelectedIndex = 0;
@@ -86,7 +92,7 @@
             this.tbpRegistro.Location = new System.Drawing.Point(4, 22);
             this.tbpRegistro.Name = "tbpRegistro";
             this.tbpRegistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpRegistro.Size = new System.Drawing.Size(496, 335);
+            this.tbpRegistro.Size = new System.Drawing.Size(475, 335);
             this.tbpRegistro.TabIndex = 0;
             this.tbpRegistro.Text = "Registra Empresa Domiciliaria";
             this.tbpRegistro.UseVisualStyleBackColor = true;
@@ -195,14 +201,6 @@
             this.pnlConsulta.Size = new System.Drawing.Size(415, 271);
             this.pnlConsulta.TabIndex = 0;
             // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(17, 57);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(374, 185);
-            this.dgvDatos.TabIndex = 0;
-            // 
             // btnConsultarEmpresas
             // 
             this.btnConsultarEmpresas.Location = new System.Drawing.Point(17, 20);
@@ -212,6 +210,53 @@
             this.btnConsultarEmpresas.Text = "Consultar Empresas";
             this.btnConsultarEmpresas.UseVisualStyleBackColor = true;
             this.btnConsultarEmpresas.Click += new System.EventHandler(this.btnConsultarEmpresas_Click);
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(17, 57);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(374, 185);
+            this.dgvDatos.TabIndex = 0;
+            // 
+            // tbpEliminar
+            // 
+            this.tbpEliminar.Controls.Add(this.txtEliminar);
+            this.tbpEliminar.Controls.Add(this.lbEliminar);
+            this.tbpEliminar.Controls.Add(this.btnEliminar);
+            this.tbpEliminar.Location = new System.Drawing.Point(4, 22);
+            this.tbpEliminar.Name = "tbpEliminar";
+            this.tbpEliminar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpEliminar.Size = new System.Drawing.Size(475, 335);
+            this.tbpEliminar.TabIndex = 2;
+            this.tbpEliminar.Text = "Eliminar Empresa";
+            this.tbpEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(44, 114);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lbEliminar
+            // 
+            this.lbEliminar.AutoSize = true;
+            this.lbEliminar.Location = new System.Drawing.Point(41, 67);
+            this.lbEliminar.Name = "lbEliminar";
+            this.lbEliminar.Size = new System.Drawing.Size(174, 13);
+            this.lbEliminar.TabIndex = 1;
+            this.lbEliminar.Text = "Ingrse Nit de la empresa a eliminar :";
+            // 
+            // txtEliminar
+            // 
+            this.txtEliminar.Location = new System.Drawing.Point(260, 60);
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminar.TabIndex = 2;
             // 
             // Form1
             // 
@@ -228,6 +273,8 @@
             this.tbpConsulta.ResumeLayout(false);
             this.pnlConsulta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            this.tbpEliminar.ResumeLayout(false);
+            this.tbpEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -251,6 +298,10 @@
         private System.Windows.Forms.Panel pnlConsulta;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btnConsultarEmpresas;
+        private System.Windows.Forms.TabPage tbpEliminar;
+        private System.Windows.Forms.TextBox txtEliminar;
+        private System.Windows.Forms.Label lbEliminar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

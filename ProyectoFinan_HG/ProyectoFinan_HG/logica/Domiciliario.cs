@@ -43,5 +43,14 @@ namespace ProyectoFinan_HG.logica
             return miDs;
         }
 
+        public DataSet eliminarDomiciliario(string id)
+        {
+            string consulta;
+            DataSet miDS = new DataSet();
+            consulta = "delete from Domiciliario where domId = " + id;
+            miDS = dt.ejecutarSELECT(consulta);
+            return miDS;
+        }
+
     }
 }

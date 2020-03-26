@@ -33,11 +33,13 @@
             this.btnCamarasDeComercio = new System.Windows.Forms.Button();
             this.btnDomiciliarios = new System.Windows.Forms.Button();
             this.btnEmpresas = new System.Windows.Forms.Button();
+            this.btnVinTrabaja = new System.Windows.Forms.Button();
             this.b.SuspendLayout();
             this.SuspendLayout();
             // 
             // b
             // 
+            this.b.Controls.Add(this.btnVinTrabaja);
             this.b.Controls.Add(this.btnTodaInfo);
             this.b.Controls.Add(this.btnCamarasDeComercio);
             this.b.Controls.Add(this.btnDomiciliarios);
@@ -87,6 +89,16 @@
             this.btnEmpresas.UseVisualStyleBackColor = true;
             this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
             // 
+            // btnVinTrabaja
+            // 
+            this.btnVinTrabaja.Location = new System.Drawing.Point(146, 214);
+            this.btnVinTrabaja.Name = "btnVinTrabaja";
+            this.btnVinTrabaja.Size = new System.Drawing.Size(361, 45);
+            this.btnVinTrabaja.TabIndex = 4;
+            this.btnVinTrabaja.Text = "Vinculación de trabajadores";
+            this.btnVinTrabaja.UseVisualStyleBackColor = true;
+            this.btnVinTrabaja.Click += new System.EventHandler(this.btnVinTrabaja_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,5 +119,6 @@
         private System.Windows.Forms.Button btnDomiciliarios;
         private System.Windows.Forms.Button btnCamarasDeComercio;
         private System.Windows.Forms.Button btnTodaInfo;
+        private System.Windows.Forms.Button btnVinTrabaja;
     }
 }
