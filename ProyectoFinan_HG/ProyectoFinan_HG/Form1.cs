@@ -35,8 +35,6 @@ namespace ProyectoFinan_HG
             nombre = txtNombre.Text;
             fecha = string.Format("yyyy-mm-dd",dtpFecha);
 
-            /*paso 2
-            *enviar las variables a la capa de la lógica*/
 
             resultado = empresa.ingresarEmpresa(nit, nombre, fecha, ccomnit);
             if (resultado > 0)
@@ -55,7 +53,6 @@ namespace ProyectoFinan_HG
             dsResultado = empresa.consultarEmpresa();
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
-            //u
         }
     }
 }

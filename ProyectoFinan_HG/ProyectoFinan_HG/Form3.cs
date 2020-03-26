@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using ProyectoFinan_HG.logica;
 
 namespace ProyectoFinan_HG
@@ -27,17 +26,15 @@ namespace ProyectoFinan_HG
             nit = int.Parse(txtNit.Text);
 
             nombre = txtNombre.Text;
-            /*paso 2
-            *enviar las variables a la capa de la lógica*/
 
             resultado = ccom.ingresarCamaraCom(nit, nombre);
             if (resultado > 0)
             {
-                MessageBox.Show("Empresa Domiciliaria Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cámara de comercio Registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Empresa Domiciliaria  no Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cámara de comercio  no Registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

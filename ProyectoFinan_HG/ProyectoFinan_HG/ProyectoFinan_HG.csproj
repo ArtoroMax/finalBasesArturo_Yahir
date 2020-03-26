@@ -80,6 +80,7 @@
     <Compile Include="logica\CamaraComercio.cs" />
     <Compile Include="logica\Domiciliario.cs" />
     <Compile Include="logica\EmpresaDomiciliaria.cs" />
+    <Compile Include="logica\Trabaja.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.b = new System.Windows.Forms.Panel();
+            this.btnTodaInfo = new System.Windows.Forms.Button();
             this.btnCamarasDeComercio = new System.Windows.Forms.Button();
             this.btnDomiciliarios = new System.Windows.Forms.Button();
             this.btnEmpresas = new System.Windows.Forms.Button();
-            this.btnTodaInfo = new System.Windows.Forms.Button();
             this.b.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,16 @@
             this.b.Name = "b";
             this.b.Size = new System.Drawing.Size(656, 282);
             this.b.TabIndex = 0;
+            // 
+            // btnTodaInfo
+            // 
+            this.btnTodaInfo.Location = new System.Drawing.Point(146, 164);
+            this.btnTodaInfo.Name = "btnTodaInfo";
+            this.btnTodaInfo.Size = new System.Drawing.Size(361, 43);
+            this.btnTodaInfo.TabIndex = 3;
+            this.btnTodaInfo.Text = "Toda la información";
+            this.btnTodaInfo.UseVisualStyleBackColor = true;
+            this.btnTodaInfo.Click += new System.EventHandler(this.btnTodaInfo_Click);
             // 
             // btnCamarasDeComercio
             // 
@@ -76,15 +86,6 @@
             this.btnEmpresas.Text = "Empresas";
             this.btnEmpresas.UseVisualStyleBackColor = true;
             this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
-            // 
-            // btnTodaInfo
-            // 
-            this.btnTodaInfo.Location = new System.Drawing.Point(146, 164);
-            this.btnTodaInfo.Name = "btnTodaInfo";
-            this.btnTodaInfo.Size = new System.Drawing.Size(361, 43);
-            this.btnTodaInfo.TabIndex = 3;
-            this.btnTodaInfo.Text = "Toda la información";
-            this.btnTodaInfo.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 

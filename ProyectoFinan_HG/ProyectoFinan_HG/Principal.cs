@@ -37,5 +37,12 @@ namespace ProyectoFinan_HG
             Form3 form3 = new Form3();
             form3.ShowDialog();
         }
+
+        private void btnTodaInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+        }
     }
 }

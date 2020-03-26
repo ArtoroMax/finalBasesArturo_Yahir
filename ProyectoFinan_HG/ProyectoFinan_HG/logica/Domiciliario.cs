@@ -33,5 +33,15 @@ namespace ProyectoFinan_HG.logica
             miDS = dt.ejecutarSELECT(consulta);
             return miDS;
         }
+
+        public DataSet consultarDomActivos()
+        {
+            string consulta;
+            DataSet miDs = new DataSet();
+            consulta = "select count(*) from Trabaja natural join Domiciliario where domEstado = 'activo'";
+            miDs = dt.ejecutarSELECT(consulta);
+            return miDs;
+        }
+
     }
 }

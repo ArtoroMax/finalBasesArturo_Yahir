@@ -38,17 +38,14 @@ namespace ProyectoFinan_HG
             anios = cbxAnios.SelectedItem.ToString();
 
 
-            /*paso 2
-            *enviar las variables a la capa de la lógica*/
-
             resultado = domi.ingresarDomiciliario(id, nombre, apellido, anios, estado);
             if (resultado > 0)
             {
-                MessageBox.Show("Empresa Domiciliaria Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Domiciliario Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Empresa Domiciliaria  no Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Domiciliario  no Registrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,7 +60,6 @@ namespace ProyectoFinan_HG
             dsResultado = domi.consultarDomiciliario();
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
-            //gh
         }
     }
 }
