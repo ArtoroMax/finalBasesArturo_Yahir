@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.b = new System.Windows.Forms.Panel();
+            this.btnVinTrabaja = new System.Windows.Forms.Button();
             this.btnTodaInfo = new System.Windows.Forms.Button();
             this.btnCamarasDeComercio = new System.Windows.Forms.Button();
             this.btnDomiciliarios = new System.Windows.Forms.Button();
             this.btnEmpresas = new System.Windows.Forms.Button();
-            this.btnVinTrabaja = new System.Windows.Forms.Button();
             this.b.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,14 +45,24 @@
             this.b.Controls.Add(this.btnCamarasDeComercio);
             this.b.Controls.Add(this.btnDomiciliarios);
             this.b.Controls.Add(this.btnEmpresas);
-            this.b.Location = new System.Drawing.Point(67, 132);
+            this.b.Location = new System.Drawing.Point(200, 80);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(656, 282);
+            this.b.Size = new System.Drawing.Size(403, 282);
             this.b.TabIndex = 0;
+            // 
+            // btnVinTrabaja
+            // 
+            this.btnVinTrabaja.Location = new System.Drawing.Point(20, 214);
+            this.btnVinTrabaja.Name = "btnVinTrabaja";
+            this.btnVinTrabaja.Size = new System.Drawing.Size(361, 45);
+            this.btnVinTrabaja.TabIndex = 4;
+            this.btnVinTrabaja.Text = "Vinculación de trabajadores";
+            this.btnVinTrabaja.UseVisualStyleBackColor = true;
+            this.btnVinTrabaja.Click += new System.EventHandler(this.btnVinTrabaja_Click);
             // 
             // btnTodaInfo
             // 
-            this.btnTodaInfo.Location = new System.Drawing.Point(146, 164);
+            this.btnTodaInfo.Location = new System.Drawing.Point(20, 165);
             this.btnTodaInfo.Name = "btnTodaInfo";
             this.btnTodaInfo.Size = new System.Drawing.Size(361, 43);
             this.btnTodaInfo.TabIndex = 3;
@@ -61,7 +72,7 @@
             // 
             // btnCamarasDeComercio
             // 
-            this.btnCamarasDeComercio.Location = new System.Drawing.Point(146, 115);
+            this.btnCamarasDeComercio.Location = new System.Drawing.Point(20, 115);
             this.btnCamarasDeComercio.Name = "btnCamarasDeComercio";
             this.btnCamarasDeComercio.Size = new System.Drawing.Size(361, 43);
             this.btnCamarasDeComercio.TabIndex = 2;
@@ -71,7 +82,7 @@
             // 
             // btnDomiciliarios
             // 
-            this.btnDomiciliarios.Location = new System.Drawing.Point(146, 66);
+            this.btnDomiciliarios.Location = new System.Drawing.Point(20, 66);
             this.btnDomiciliarios.Name = "btnDomiciliarios";
             this.btnDomiciliarios.Size = new System.Drawing.Size(361, 43);
             this.btnDomiciliarios.TabIndex = 1;
@@ -81,7 +92,7 @@
             // 
             // btnEmpresas
             // 
-            this.btnEmpresas.Location = new System.Drawing.Point(146, 17);
+            this.btnEmpresas.Location = new System.Drawing.Point(20, 17);
             this.btnEmpresas.Name = "btnEmpresas";
             this.btnEmpresas.Size = new System.Drawing.Size(361, 43);
             this.btnEmpresas.TabIndex = 0;
@@ -89,22 +100,14 @@
             this.btnEmpresas.UseVisualStyleBackColor = true;
             this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
             // 
-            // btnVinTrabaja
-            // 
-            this.btnVinTrabaja.Location = new System.Drawing.Point(146, 214);
-            this.btnVinTrabaja.Name = "btnVinTrabaja";
-            this.btnVinTrabaja.Size = new System.Drawing.Size(361, 45);
-            this.btnVinTrabaja.TabIndex = 4;
-            this.btnVinTrabaja.Text = "Vinculación de trabajadores";
-            this.btnVinTrabaja.UseVisualStyleBackColor = true;
-            this.btnVinTrabaja.Click += new System.EventHandler(this.btnVinTrabaja_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.b);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Text = "Menú Principal";
             this.b.ResumeLayout(false);

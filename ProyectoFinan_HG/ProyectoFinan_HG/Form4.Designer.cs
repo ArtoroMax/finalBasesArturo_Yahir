@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.tbpFecha = new System.Windows.Forms.TabPage();
             this.pnlFecha = new System.Windows.Forms.Panel();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.txtRes = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnActivos = new System.Windows.Forms.Button();
@@ -41,14 +43,13 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvInformacion = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.tbpFecha.SuspendLayout();
             this.pnlFecha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.tbcConsultas.SuspendLayout();
             this.tbpInformacion.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpFecha
@@ -74,6 +75,14 @@
             this.pnlFecha.Name = "pnlFecha";
             this.pnlFecha.Size = new System.Drawing.Size(448, 279);
             this.pnlFecha.TabIndex = 0;
+            // 
+            // dgvResultado
+            // 
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(22, 130);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.Size = new System.Drawing.Size(402, 81);
+            this.dgvResultado.TabIndex = 4;
             // 
             // txtRes
             // 
@@ -178,31 +187,26 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // dgvResultado
-            // 
-            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultado.Location = new System.Drawing.Point(22, 130);
-            this.dgvResultado.Name = "dgvResultado";
-            this.dgvResultado.Size = new System.Drawing.Size(402, 81);
-            this.dgvResultado.TabIndex = 4;
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
             this.ClientSize = new System.Drawing.Size(589, 402);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcConsultas);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Consulta General";
             this.tbpFecha.ResumeLayout(false);
             this.pnlFecha.ResumeLayout(false);
             this.pnlFecha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.tbcConsultas.ResumeLayout(false);
             this.tbpInformacion.ResumeLayout(false);
             this.pnlInformacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.ResumeLayout(false);
 
         }

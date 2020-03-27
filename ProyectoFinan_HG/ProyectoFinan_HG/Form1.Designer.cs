@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtNit = new System.Windows.Forms.TextBox();
             this.lbMensaje = new System.Windows.Forms.Label();
             this.tbcGestionEmpresa = new System.Windows.Forms.TabControl();
@@ -275,11 +276,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 419);
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
+            this.ClientSize = new System.Drawing.Size(583, 439);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionEmpresa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Empresa Domiciliaria";
             this.tbcGestionEmpresa.ResumeLayout(false);
             this.tbpRegistro.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);

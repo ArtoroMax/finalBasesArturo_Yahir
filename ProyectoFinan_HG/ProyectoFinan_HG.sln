@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinan_HG", "ProyectoFinan_HG\ProyectoFinan_HG.csproj", "{80D73FA0-DB13-4D19-9667-4BA30B95C15F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursos", "Recursos", "{E5362DA7-E448-4C37-AA0F-F016E42D0566}"
+	ProjectSection(SolutionItems) = preProject
+		E:\Descargas\istockphoto-923699806-170667a.jpg = E:\Descargas\istockphoto-923699806-170667a.jpg
+		E:\Descargas\pizza_pizzadeliverypersonpeopleman_pizza_repartidordepizzas_person_1645.ico = E:\Descargas\pizza_pizzadeliverypersonpeopleman_pizza_repartidordepizzas_person_1645.ico
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

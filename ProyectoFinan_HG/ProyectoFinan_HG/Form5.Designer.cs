@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.tbpRegistrar = new System.Windows.Forms.TabPage();
             this.pnlVinculacion = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -186,11 +187,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
             this.ClientSize = new System.Drawing.Size(521, 407);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcTrabaja);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "Vinculación";
             this.tbpRegistrar.ResumeLayout(false);
             this.pnlVinculacion.ResumeLayout(false);
             this.pnlVinculacion.PerformLayout();

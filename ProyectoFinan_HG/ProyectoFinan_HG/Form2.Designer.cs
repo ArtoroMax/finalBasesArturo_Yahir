@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tbcGestionDomiciliario = new System.Windows.Forms.TabControl();
             this.tbpRegistro = new System.Windows.Forms.TabPage();
             this.pnlRegistro = new System.Windows.Forms.Panel();
@@ -316,11 +317,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
             this.ClientSize = new System.Drawing.Size(556, 442);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionDomiciliario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Domiciliario";
             this.tbcGestionDomiciliario.ResumeLayout(false);
             this.tbpRegistro.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.tbpRegistro = new System.Windows.Forms.TabPage();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -187,11 +188,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
             this.ClientSize = new System.Drawing.Size(500, 406);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionarCamara);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Camara de Comercio";
             this.tbpRegistro.ResumeLayout(false);
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
