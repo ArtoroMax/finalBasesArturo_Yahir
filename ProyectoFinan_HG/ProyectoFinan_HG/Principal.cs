@@ -41,15 +41,15 @@ namespace ProyectoFinan_HG
         private void btnTodaInfo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
         }
 
         private void btnVinTrabaja_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form4 form4 = new Form4();
-            form4.ShowDialog();
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
         }
     }
 }

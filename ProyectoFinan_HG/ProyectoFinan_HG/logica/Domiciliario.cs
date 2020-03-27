@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ProyectoFinan_HG.accesoDatos;
 using Oracle.DataAccess.Client;
 
 namespace ProyectoFinan_HG.logica
@@ -43,13 +44,13 @@ namespace ProyectoFinan_HG.logica
             return miDs;
         }
 
-        public DataSet eliminarDomiciliario(string id)
+        public int eliminarDomiciliario(string id)
         {
+            int result = 0;
             string consulta;
-            DataSet miDS = new DataSet();
-            consulta = "delete from Domiciliario where domId = " + id;
-            miDS = dt.ejecutarSELECT(consulta);
-            return miDS;
+            consulta = "on delete set null from Domiciliario where domId = " + id;
+            result = dt.ejecutarDML(consulta);
+            return result;
         }
 
     }

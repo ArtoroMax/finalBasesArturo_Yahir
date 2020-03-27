@@ -40,5 +40,12 @@ namespace ProyectoFinan_HG
                 MessageBox.Show("Cámara de comercio  no Registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal form4 = new Principal();
+            form4.ShowDialog();
+        }
     }
 }

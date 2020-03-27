@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ProyectoFinan_HG.accesoDatos;
 using Oracle.DataAccess.Client;
 
 namespace ProyectoFinan_HG.logica
@@ -17,7 +18,7 @@ namespace ProyectoFinan_HG.logica
             int result = 0;
             string consulta;
             /* se arma la consulta*/
-            consulta = "insert into CamaraComercio(ccomIdId, ccomNombre) values(" + nit + ",'" + nombre +"')";
+            consulta = "insert into CamaraComercio(ccomNit, ccomNombre) values(" + nit + ",'" + nombre +"')";
             /* se envía la consulta a la capa de accesoDatos PARA SER EJECUTADA*/
             result = dt.ejecutarDML(consulta);
             return result;

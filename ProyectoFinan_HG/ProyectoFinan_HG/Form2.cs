@@ -65,9 +65,9 @@ namespace ProyectoFinan_HG
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string cod = txtIdEliminar.Text;
-            DataSet dsResultado = new DataSet();
-            dsResultado = domi.eliminarDomiciliario(cod);
-            if (dsResultado.Tables[0].Rows.Count > 0)
+            int resultado;
+            resultado = domi.eliminarDomiciliario(cod);
+            if (resultado > 0)
             {
                 MessageBox.Show("Domiciliario eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -75,6 +75,13 @@ namespace ProyectoFinan_HG
             {
                 MessageBox.Show("Id no encontrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal form4 = new Principal();
+            form4.ShowDialog();
         }
     }
 }

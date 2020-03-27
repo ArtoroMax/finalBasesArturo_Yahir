@@ -30,24 +30,25 @@
         {
             this.tbpFecha = new System.Windows.Forms.TabPage();
             this.pnlFecha = new System.Windows.Forms.Panel();
-            this.lbMensaje = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnActivos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.tbcConsultas = new System.Windows.Forms.TabControl();
-            this.pnlInformacion = new System.Windows.Forms.Panel();
-            this.dgvInformacion = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.tbpInformacion = new System.Windows.Forms.TabPage();
             this.txtRes = new System.Windows.Forms.TextBox();
-            this.lbDatos = new System.Windows.Forms.Label();
-            this.lbResultado = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnActivos = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lbMensaje = new System.Windows.Forms.Label();
+            this.tbcConsultas = new System.Windows.Forms.TabControl();
+            this.tbpInformacion = new System.Windows.Forms.TabPage();
+            this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.dgvInformacion = new System.Windows.Forms.DataGridView();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.tbpFecha.SuspendLayout();
             this.pnlFecha.SuspendLayout();
             this.tbcConsultas.SuspendLayout();
+            this.tbpInformacion.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
-            this.tbpInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpFecha
@@ -56,15 +57,14 @@
             this.tbpFecha.Location = new System.Drawing.Point(4, 22);
             this.tbpFecha.Name = "tbpFecha";
             this.tbpFecha.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpFecha.Size = new System.Drawing.Size(552, 345);
+            this.tbpFecha.Size = new System.Drawing.Size(527, 313);
             this.tbpFecha.TabIndex = 2;
             this.tbpFecha.Text = "Consultar por fecha";
             this.tbpFecha.UseVisualStyleBackColor = true;
             // 
             // pnlFecha
             // 
-            this.pnlFecha.Controls.Add(this.lbResultado);
-            this.pnlFecha.Controls.Add(this.lbDatos);
+            this.pnlFecha.Controls.Add(this.dgvResultado);
             this.pnlFecha.Controls.Add(this.txtRes);
             this.pnlFecha.Controls.Add(this.btnBuscar);
             this.pnlFecha.Controls.Add(this.btnActivos);
@@ -75,31 +75,13 @@
             this.pnlFecha.Size = new System.Drawing.Size(448, 279);
             this.pnlFecha.TabIndex = 0;
             // 
-            // lbMensaje
+            // txtRes
             // 
-            this.lbMensaje.AutoSize = true;
-            this.lbMensaje.Location = new System.Drawing.Point(19, 35);
-            this.lbMensaje.Name = "lbMensaje";
-            this.lbMensaje.Size = new System.Drawing.Size(281, 13);
-            this.lbMensaje.TabIndex = 0;
-            this.lbMensaje.Text = "Seleccione la fecha de inicio de trabajo que desea buscar";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Location = new System.Drawing.Point(22, 64);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
-            this.dtpFecha.TabIndex = 1;
-            // 
-            // btnActivos
-            // 
-            this.btnActivos.Location = new System.Drawing.Point(22, 199);
-            this.btnActivos.Name = "btnActivos";
-            this.btnActivos.Size = new System.Drawing.Size(193, 23);
-            this.btnActivos.TabIndex = 0;
-            this.btnActivos.Text = "Consultar domiciliarios activos";
-            this.btnActivos.UseVisualStyleBackColor = true;
-            this.btnActivos.Click += new System.EventHandler(this.btnActivos_Click);
+            this.txtRes.Location = new System.Drawing.Point(22, 246);
+            this.txtRes.Name = "txtRes";
+            this.txtRes.Size = new System.Drawing.Size(100, 20);
+            this.txtRes.TabIndex = 3;
+            this.txtRes.TextChanged += new System.EventHandler(this.txtRes_TextChanged);
             // 
             // btnBuscar
             // 
@@ -111,6 +93,33 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnActivos
+            // 
+            this.btnActivos.Location = new System.Drawing.Point(22, 217);
+            this.btnActivos.Name = "btnActivos";
+            this.btnActivos.Size = new System.Drawing.Size(193, 23);
+            this.btnActivos.TabIndex = 0;
+            this.btnActivos.Text = "Consultar domiciliarios activos";
+            this.btnActivos.UseVisualStyleBackColor = true;
+            this.btnActivos.Click += new System.EventHandler(this.btnActivos_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(22, 64);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 1;
+            // 
+            // lbMensaje
+            // 
+            this.lbMensaje.AutoSize = true;
+            this.lbMensaje.Location = new System.Drawing.Point(19, 35);
+            this.lbMensaje.Name = "lbMensaje";
+            this.lbMensaje.Size = new System.Drawing.Size(281, 13);
+            this.lbMensaje.TabIndex = 0;
+            this.lbMensaje.Text = "Seleccione la fecha de inicio de trabajo que desea buscar";
+            // 
             // tbcConsultas
             // 
             this.tbcConsultas.Controls.Add(this.tbpInformacion);
@@ -118,8 +127,19 @@
             this.tbcConsultas.Location = new System.Drawing.Point(12, 12);
             this.tbcConsultas.Name = "tbcConsultas";
             this.tbcConsultas.SelectedIndex = 0;
-            this.tbcConsultas.Size = new System.Drawing.Size(560, 371);
+            this.tbcConsultas.Size = new System.Drawing.Size(535, 339);
             this.tbcConsultas.TabIndex = 0;
+            // 
+            // tbpInformacion
+            // 
+            this.tbpInformacion.Controls.Add(this.pnlInformacion);
+            this.tbpInformacion.Location = new System.Drawing.Point(4, 22);
+            this.tbpInformacion.Name = "tbpInformacion";
+            this.tbpInformacion.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpInformacion.Size = new System.Drawing.Size(527, 313);
+            this.tbpInformacion.TabIndex = 0;
+            this.tbpInformacion.Text = "Consulta general";
+            this.tbpInformacion.UseVisualStyleBackColor = true;
             // 
             // pnlInformacion
             // 
@@ -129,14 +149,6 @@
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(372, 245);
             this.pnlInformacion.TabIndex = 0;
-            // 
-            // dgvInformacion
-            // 
-            this.dgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformacion.Location = new System.Drawing.Point(68, 70);
-            this.dgvInformacion.Name = "dgvInformacion";
-            this.dgvInformacion.Size = new System.Drawing.Size(240, 150);
-            this.dgvInformacion.TabIndex = 0;
             // 
             // btnConsultar
             // 
@@ -148,49 +160,38 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // tbpInformacion
+            // dgvInformacion
             // 
-            this.tbpInformacion.Controls.Add(this.pnlInformacion);
-            this.tbpInformacion.Location = new System.Drawing.Point(4, 22);
-            this.tbpInformacion.Name = "tbpInformacion";
-            this.tbpInformacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpInformacion.Size = new System.Drawing.Size(552, 345);
-            this.tbpInformacion.TabIndex = 0;
-            this.tbpInformacion.Text = "Consulta general";
-            this.tbpInformacion.UseVisualStyleBackColor = true;
+            this.dgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformacion.Location = new System.Drawing.Point(68, 70);
+            this.dgvInformacion.Name = "dgvInformacion";
+            this.dgvInformacion.Size = new System.Drawing.Size(240, 150);
+            this.dgvInformacion.TabIndex = 0;
             // 
-            // txtRes
+            // btnRegresar
             // 
-            this.txtRes.Location = new System.Drawing.Point(22, 246);
-            this.txtRes.Name = "txtRes";
-            this.txtRes.Size = new System.Drawing.Size(100, 20);
-            this.txtRes.TabIndex = 3;
-            this.txtRes.TextChanged += new System.EventHandler(this.txtRes_TextChanged);
+            this.btnRegresar.Location = new System.Drawing.Point(390, 367);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(157, 23);
+            this.btnRegresar.TabIndex = 4;
+            this.btnRegresar.Text = "Regresar al menu principal";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // lbDatos
+            // dgvResultado
             // 
-            this.lbDatos.AutoSize = true;
-            this.lbDatos.Location = new System.Drawing.Point(22, 133);
-            this.lbDatos.Name = "lbDatos";
-            this.lbDatos.Size = new System.Drawing.Size(41, 13);
-            this.lbDatos.TabIndex = 4;
-            this.lbDatos.Text = "Datos :";
-            this.lbDatos.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbResultado
-            // 
-            this.lbResultado.AutoSize = true;
-            this.lbResultado.Location = new System.Drawing.Point(25, 163);
-            this.lbResultado.Name = "lbResultado";
-            this.lbResultado.Size = new System.Drawing.Size(10, 13);
-            this.lbResultado.TabIndex = 5;
-            this.lbResultado.Text = "-";
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(22, 130);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.Size = new System.Drawing.Size(402, 81);
+            this.dgvResultado.TabIndex = 4;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 402);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcConsultas);
             this.Name = "Form4";
             this.Text = "Form4";
@@ -198,9 +199,10 @@
             this.pnlFecha.ResumeLayout(false);
             this.pnlFecha.PerformLayout();
             this.tbcConsultas.ResumeLayout(false);
+            this.tbpInformacion.ResumeLayout(false);
             this.pnlInformacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).EndInit();
-            this.tbpInformacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,7 +221,7 @@
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvInformacion;
-        private System.Windows.Forms.Label lbDatos;
-        private System.Windows.Forms.Label lbResultado;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dgvResultado;
     }
 }

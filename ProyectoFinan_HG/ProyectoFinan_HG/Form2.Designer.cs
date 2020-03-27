@@ -49,9 +49,10 @@
             this.btnConsultarDomiciliarios = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.tbpEliminar = new System.Windows.Forms.TabPage();
-            this.lbEliminar = new System.Windows.Forms.Label();
-            this.txtIdEliminar = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtIdEliminar = new System.Windows.Forms.TextBox();
+            this.lbEliminar = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.tbcGestionDomiciliario.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
@@ -141,8 +142,8 @@
             this.cbxAnios.Items.AddRange(new object[] {
             "menos de 5",
             "entre 5 y 10",
-            "entre 11 y 20",
-            "más de 20"});
+            "de 11 a 20",
+            "mas de 20"});
             this.cbxAnios.Location = new System.Drawing.Point(180, 187);
             this.cbxAnios.Name = "cbxAnios";
             this.cbxAnios.Size = new System.Drawing.Size(121, 21);
@@ -275,22 +276,6 @@
             this.tbpEliminar.Text = "Eliminar Domiciliario";
             this.tbpEliminar.UseVisualStyleBackColor = true;
             // 
-            // lbEliminar
-            // 
-            this.lbEliminar.AutoSize = true;
-            this.lbEliminar.Location = new System.Drawing.Point(28, 53);
-            this.lbEliminar.Name = "lbEliminar";
-            this.lbEliminar.Size = new System.Drawing.Size(177, 13);
-            this.lbEliminar.TabIndex = 0;
-            this.lbEliminar.Text = "Ingrese id del domiciliario a eliminar :";
-            // 
-            // txtIdEliminar
-            // 
-            this.txtIdEliminar.Location = new System.Drawing.Point(259, 46);
-            this.txtIdEliminar.Name = "txtIdEliminar";
-            this.txtIdEliminar.Size = new System.Drawing.Size(129, 20);
-            this.txtIdEliminar.TabIndex = 1;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(259, 110);
@@ -301,11 +286,38 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // txtIdEliminar
+            // 
+            this.txtIdEliminar.Location = new System.Drawing.Point(259, 46);
+            this.txtIdEliminar.Name = "txtIdEliminar";
+            this.txtIdEliminar.Size = new System.Drawing.Size(129, 20);
+            this.txtIdEliminar.TabIndex = 1;
+            // 
+            // lbEliminar
+            // 
+            this.lbEliminar.AutoSize = true;
+            this.lbEliminar.Location = new System.Drawing.Point(28, 53);
+            this.lbEliminar.Name = "lbEliminar";
+            this.lbEliminar.Size = new System.Drawing.Size(177, 13);
+            this.lbEliminar.TabIndex = 0;
+            this.lbEliminar.Text = "Ingrese id del domiciliario a eliminar :";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(353, 412);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(157, 23);
+            this.btnRegresar.TabIndex = 4;
+            this.btnRegresar.Text = "Regresar al menu principal";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 442);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionDomiciliario);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -348,5 +360,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtIdEliminar;
         private System.Windows.Forms.Label lbEliminar;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

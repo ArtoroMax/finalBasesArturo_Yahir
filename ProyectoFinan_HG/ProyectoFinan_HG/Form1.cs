@@ -33,7 +33,8 @@ namespace ProyectoFinan_HG
             ccomnit = int.Parse(txtNitcamara.Text);
                 
             nombre = txtNombre.Text;
-            fecha = string.Format("yyyy-mm-dd",dtpFecha);
+            fecha = dtpFecha.Text;
+           // fecha = Format
 
 
             resultado = empresa.ingresarEmpresa(nit, nombre, fecha, ccomnit);
@@ -58,9 +59,9 @@ namespace ProyectoFinan_HG
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string cod = txtEliminar.Text;
-            DataSet dsResultado = new DataSet();
-            dsResultado = empresa.eliminarEmpresa(cod);
-            if (dsResultado.Tables[0].Rows.Count > 0)
+            int resultado;
+            resultado = empresa.eliminarEmpresa(cod);
+            if (resultado > 0)
             {
                 MessageBox.Show("Empresa eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,6 +69,13 @@ namespace ProyectoFinan_HG
             {
                 MessageBox.Show("Nit no encontrado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal form4 = new Principal();
+            form4.ShowDialog();
         }
     }
 }

@@ -23,14 +23,7 @@ namespace ProyectoFinan_HG
         {
             DataSet dsResultado = new DataSet();
             dsResultado = dom.consultarDomActivos();
-            if (dsResultado.Tables[0].Rows.Count > 0)
-            {
-                txtRes.Text = dsResultado.Tables[0].Rows[0].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Ningun domiciliario activo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            txtRes.Text = dsResultado.ToString();
 
         }
 
@@ -50,7 +43,8 @@ namespace ProyectoFinan_HG
             dsResultado = tra.consultarPorfecha(cod);
             if (dsResultado.Tables[0].Rows.Count > 0)
             {
-                lbResultado.Text = dsResultado.Tables[0].Rows[0]["aniNombre"].ToString();
+                dgvResultado.DataSource = dsResultado;
+                dgvResultado.DataMember = "ResultadoDatos";
             }
             else
             {
@@ -66,6 +60,13 @@ namespace ProyectoFinan_HG
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal form4 = new Principal();
+            form4.ShowDialog();
         }
     }
 }

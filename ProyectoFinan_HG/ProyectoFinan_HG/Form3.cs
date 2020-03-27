@@ -45,5 +45,12 @@ namespace ProyectoFinan_HG
             dgvDatos.DataSource = dsResultado;
             dgvDatos.DataMember = "ResultadoDatos";
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal form4 = new Principal();
+            form4.ShowDialog();
+        }
     }
 }

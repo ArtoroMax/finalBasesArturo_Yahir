@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ProyectoFinan_HG.accesoDatos;
 using Oracle.DataAccess.Client;
 
 
@@ -11,15 +12,12 @@ namespace ProyectoFinan_HG.logica
 {
     class EmpresaDomiciliaria
     {
-        /*Paso 0: creo un objeto para comunicarme con la capa de accesoDatos y la clase Datos*/
         Datos dt = new Datos();
         public int ingresarEmpresa(int nit, string nombre, string fecha, int nitCcom)
         {
             int result = 0;
             string consulta;
-            /* se arma la consulta*/
             consulta = "insert into EmpresaDomiciliaria(edomNit, edomNombre, edomFechaOp, ccomNit) values(" + nit + ",'" + nombre + "','" + fecha + "','" + nitCcom + "')";
-            /* se envía la consulta a la capa de accesoDatos PARA SER EJECUTADA*/
             result = dt.ejecutarDML(consulta);
             return result;
         }
@@ -28,20 +26,18 @@ namespace ProyectoFinan_HG.logica
         {
             string consulta;
             DataSet miDS = new DataSet();
-            /* se arma la consulta*/
             consulta = "select * from EmpresaDomiciliaria";
-            /* se envía la consulta a la capa de accesoDatos PARA SER EJECUTADA*/
             miDS = dt.ejecutarSELECT(consulta);
             return miDS;
         }
 
-        public DataSet eliminarEmpresa(string nit)
+        public int eliminarEmpresa(string nit)
         {
+            int result = 0;
             string consulta;
-            DataSet miDS = new DataSet();
-            consulta = "delete from EmpresaDomiciliaria where empNit = " + nit;
-            miDS = dt.ejecutarSELECT(consulta);
-            return miDS;
+            consulta = "delete set null from EmpresaDomiciliaria where empNit = " + nit;
+            result = dt.ejecutarDML(consulta);
+            return result;
         }
     }
 }

@@ -46,9 +46,10 @@
             this.btnConsultarEmpresas = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.tbpEliminar = new System.Windows.Forms.TabPage();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.lbEliminar = new System.Windows.Forms.Label();
             this.txtEliminar = new System.Windows.Forms.TextBox();
+            this.lbEliminar = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.tbcGestionEmpresa.SuspendLayout();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
@@ -123,6 +124,8 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.CustomFormat = "";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.Location = new System.Drawing.Point(210, 143);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
@@ -232,15 +235,12 @@
             this.tbpEliminar.Text = "Eliminar Empresa";
             this.tbpEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnEliminar
+            // txtEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(44, 114);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 0;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.txtEliminar.Location = new System.Drawing.Point(260, 60);
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminar.TabIndex = 2;
             // 
             // lbEliminar
             // 
@@ -251,18 +251,32 @@
             this.lbEliminar.TabIndex = 1;
             this.lbEliminar.Text = "Ingrse Nit de la empresa a eliminar :";
             // 
-            // txtEliminar
+            // btnEliminar
             // 
-            this.txtEliminar.Location = new System.Drawing.Point(260, 60);
-            this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
-            this.txtEliminar.TabIndex = 2;
+            this.btnEliminar.Location = new System.Drawing.Point(44, 114);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(336, 384);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(157, 23);
+            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.Text = "Regresar al menu principal";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 419);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionEmpresa);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -302,6 +316,7 @@
         private System.Windows.Forms.TextBox txtEliminar;
         private System.Windows.Forms.Label lbEliminar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }
 

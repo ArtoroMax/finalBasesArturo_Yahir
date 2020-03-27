@@ -39,8 +39,9 @@
             this.tbcGestionarCamara = new System.Windows.Forms.TabControl();
             this.tbpConsultar = new System.Windows.Forms.TabPage();
             this.pnlConsultar = new System.Windows.Forms.Panel();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnConsultarCamara = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.tbpRegistro.SuspendLayout();
             this.pnlRegistro.SuspendLayout();
             this.tbcGestionarCamara.SuspendLayout();
@@ -154,14 +155,6 @@
             this.pnlConsultar.Size = new System.Drawing.Size(408, 264);
             this.pnlConsultar.TabIndex = 0;
             // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(25, 79);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(357, 167);
-            this.dgvDatos.TabIndex = 0;
-            // 
             // btnConsultarCamara
             // 
             this.btnConsultarCamara.Location = new System.Drawing.Point(25, 37);
@@ -172,11 +165,30 @@
             this.btnConsultarCamara.UseVisualStyleBackColor = true;
             this.btnConsultarCamara.Click += new System.EventHandler(this.btnConsultarCamara_Click);
             // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(25, 79);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(357, 167);
+            this.dgvDatos.TabIndex = 0;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(314, 369);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(157, 23);
+            this.btnRegresar.TabIndex = 4;
+            this.btnRegresar.Text = "Regresar al menu principal";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 406);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcGestionarCamara);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -206,5 +218,6 @@
         private System.Windows.Forms.Panel pnlConsultar;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btnConsultarCamara;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

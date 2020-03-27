@@ -15,7 +15,7 @@ namespace ProyectoFinan_HG.accesoDatos
 
 
         /*Paso1: creo la cadena de conexion a la base de datos*/
-        string cadenaConexion = "Data Source = localhost; User ID = Domiciios; Password = domi123";
+        string cadenaConexion = "Data Source = localhost; User ID = YAHIR; Password = 123";
 
         /*Paso 2: creo el metodo que ejecuta yuna consulta DML(insert , update, delete )*/
         public int ejecutarDML(string consulta)
