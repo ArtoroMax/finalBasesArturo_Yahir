@@ -32,7 +32,6 @@
             this.tbpFecha = new System.Windows.Forms.TabPage();
             this.pnlFecha = new System.Windows.Forms.Panel();
             this.dgvResultado = new System.Windows.Forms.DataGridView();
-            this.txtRes = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnActivos = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +42,7 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvInformacion = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.dgvInformacion2 = new System.Windows.Forms.DataGridView();
             this.tbpFecha.SuspendLayout();
             this.pnlFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
@@ -50,6 +50,7 @@
             this.tbpInformacion.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpFecha
@@ -58,22 +59,22 @@
             this.tbpFecha.Location = new System.Drawing.Point(4, 22);
             this.tbpFecha.Name = "tbpFecha";
             this.tbpFecha.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpFecha.Size = new System.Drawing.Size(527, 313);
+            this.tbpFecha.Size = new System.Drawing.Size(527, 395);
             this.tbpFecha.TabIndex = 2;
             this.tbpFecha.Text = "Consultar por fecha";
             this.tbpFecha.UseVisualStyleBackColor = true;
             // 
             // pnlFecha
             // 
+            this.pnlFecha.Controls.Add(this.dgvInformacion2);
             this.pnlFecha.Controls.Add(this.dgvResultado);
-            this.pnlFecha.Controls.Add(this.txtRes);
             this.pnlFecha.Controls.Add(this.btnBuscar);
             this.pnlFecha.Controls.Add(this.btnActivos);
             this.pnlFecha.Controls.Add(this.dtpFecha);
             this.pnlFecha.Controls.Add(this.lbMensaje);
             this.pnlFecha.Location = new System.Drawing.Point(39, 27);
             this.pnlFecha.Name = "pnlFecha";
-            this.pnlFecha.Size = new System.Drawing.Size(448, 279);
+            this.pnlFecha.Size = new System.Drawing.Size(448, 350);
             this.pnlFecha.TabIndex = 0;
             // 
             // dgvResultado
@@ -83,14 +84,6 @@
             this.dgvResultado.Name = "dgvResultado";
             this.dgvResultado.Size = new System.Drawing.Size(402, 81);
             this.dgvResultado.TabIndex = 4;
-            // 
-            // txtRes
-            // 
-            this.txtRes.Location = new System.Drawing.Point(22, 246);
-            this.txtRes.Name = "txtRes";
-            this.txtRes.Size = new System.Drawing.Size(100, 20);
-            this.txtRes.TabIndex = 3;
-            this.txtRes.TextChanged += new System.EventHandler(this.txtRes_TextChanged);
             // 
             // btnBuscar
             // 
@@ -136,7 +129,7 @@
             this.tbcConsultas.Location = new System.Drawing.Point(12, 12);
             this.tbcConsultas.Name = "tbcConsultas";
             this.tbcConsultas.SelectedIndex = 0;
-            this.tbcConsultas.Size = new System.Drawing.Size(535, 339);
+            this.tbcConsultas.Size = new System.Drawing.Size(535, 421);
             this.tbcConsultas.TabIndex = 0;
             // 
             // tbpInformacion
@@ -179,7 +172,7 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(390, 367);
+            this.btnRegresar.Location = new System.Drawing.Point(390, 439);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(157, 23);
             this.btnRegresar.TabIndex = 4;
@@ -187,12 +180,20 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // dgvInformacion2
+            // 
+            this.dgvInformacion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformacion2.Location = new System.Drawing.Point(22, 246);
+            this.dgvInformacion2.Name = "dgvInformacion2";
+            this.dgvInformacion2.Size = new System.Drawing.Size(402, 79);
+            this.dgvInformacion2.TabIndex = 5;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoFinan_HG.Properties.Resources.istockphoto_923699806_170667a;
-            this.ClientSize = new System.Drawing.Size(589, 402);
+            this.ClientSize = new System.Drawing.Size(593, 524);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.tbcConsultas);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -207,6 +208,7 @@
             this.tbpInformacion.ResumeLayout(false);
             this.pnlInformacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,7 +217,6 @@
 
         private System.Windows.Forms.TabPage tbpFecha;
         private System.Windows.Forms.Panel pnlFecha;
-        private System.Windows.Forms.TextBox txtRes;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnActivos;
         private System.Windows.Forms.DateTimePicker dtpFecha;
@@ -227,5 +228,6 @@
         private System.Windows.Forms.DataGridView dgvInformacion;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.DataGridView dgvResultado;
+        private System.Windows.Forms.DataGridView dgvInformacion2;
     }
 }

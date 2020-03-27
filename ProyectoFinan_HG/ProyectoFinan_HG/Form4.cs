@@ -23,7 +23,8 @@ namespace ProyectoFinan_HG
         {
             DataSet dsResultado = new DataSet();
             dsResultado = dom.consultarDomActivos();
-            txtRes.Text = dsResultado.ToString();
+            dgvInformacion2.DataSource = dsResultado;
+            dgvInformacion2.DataMember = "ResultadoDatos";
 
         }
 
